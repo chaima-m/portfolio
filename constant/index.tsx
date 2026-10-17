@@ -1,11 +1,11 @@
 export const PROFILE = {
   name: "Chaima Mekhloufi",
-  title: "AI & Data Science Engineer",
-  tagline: "LLM · RAG · Docker · Kubernetes · Linux",
-  email: "chaima.mekhloufi@ensia.edu.dz",
+  title: "AI & Data Science Engineer (Student)",
+  tagline: "LLM · RAG · Docker · Linux",
+  email: "chaimamekh213@gmail.com",
   github: "https://github.com/chaima-m",
   linkedin: "https://www.linkedin.com/in/chaima-mekhloufi-1b2007299/",
-  location: "Batna, Algeria",
+  location: "Algiers, Algeria",
   cv: "/Chaima_Mekhloufi_CV.pdf", // put your CV PDF in /public with this exact name
 };
 
@@ -123,7 +123,7 @@ export const SKILLS = [
 export const HIGHLIGHTS = [
   { value: "< 3 s", label: "answers from the bilingual RAG assistant" },
   { value: "RAG", label: "Assistants built at GEAT and Algérie Télécom, in French and Arabic" },
-  { value: "Kubernetes", label: "Microservice platform with autoscaling, RBAC and rolling updates" },
+  { value: "AI / ML", label: "LLM Fine-tuning , NLP, Deep Learning, Reinforcement Learning" },
 ];
 
 export const OTHER_WORK = [

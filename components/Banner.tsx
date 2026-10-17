@@ -11,7 +11,7 @@ const Banner: React.FC<{}> = () => {
         {/* Put your photo in /public/Me.png */}
         <Image
           priority
-          src="/me.png"
+          src="/Me.png"
           height={220}
           width={220}
           alt="Chaima Mekhloufi"
@@ -37,7 +37,7 @@ const Banner: React.FC<{}> = () => {
         <p className="text-base text-gray-300 leading-relaxed mt-5 max-w-[560px]">
           Final-year AI &amp; Data Science engineering student at ENSIA. I build
           production-oriented AI systems: on-premise LLMs, RAG assistants and
-          containerized microservice platforms on Docker &amp; Kubernetes.
+          containerized microservice platforms on Docker &amp;.
         </p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-3">
