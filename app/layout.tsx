@@ -10,8 +10,8 @@ const inter = Inter({ subsets: ["latin"] });
 
 // TODO: replace with your real domain once deployed
 const SITE_URL =
-  process.env.NEXT_PUBLIC_BASE_URL ?? "https://chaima-mekhloufi.vercel.app";
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID; // optional, e.g. G-XXXXXXXXXX
+  process.env.NEXT_PUBLIC_BASE_URL ?? "chaima-mekhloufi.vercel.app";
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID;
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -31,12 +31,16 @@ export const metadata: Metadata = {
     "Portfolio",
   ],
   openGraph: {
-    title: "Chaima Mekhloufi - AI & Data Science Engineer",
-    description:
-      "LLM, RAG and containerized AI systems. Final-year engineering student at ENSIA, Algiers.",
-    images: "/og-image.png",
+    title: "Chaima Mekhloufi - AI & Data Science Engineering Student",
+    description: "LLM, RAG and containerized AI systems. Final-year engineering student at ENSIA, Algiers.",
+    url: SITE_URL,
+    type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Chaima Mekhloufi" }],
   },
-  alternates: { canonical: SITE_URL },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-image.png"],
+  },
 };
 
 export default function RootLayout({
