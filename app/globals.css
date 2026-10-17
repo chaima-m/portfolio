@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Font comes from next/font (Inter) in layout.tsx: system-quality optical sizing, no override here. */
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer components {
+  /* Translucent material: content scrolls beneath, bright top edge = light catching the glass */
+  .glass {
+    background: rgba(20, 20, 24, 0.55);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-top-color: rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  }
+
+  /* Materialize on scroll: blur + scale + opacity together, not a plain fade */
+  .reveal {
+    opacity: 0;
+    transform: translateY(16px) scale(0.985);
+    filter: blur(6px);
+    transition:
+      opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+      filter 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .reveal-in {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+
+  /* Instant press feedback, springy release */
+  .press {
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+      border-color 0.25s ease, background-color 0.25s ease, opacity 0.25s ease;
+  }
+  .press:active {
+    transform: scale(0.97);
+    transition-duration: 0.08s;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    transform: none;
+    filter: none;
+    transition: opacity 0.2s ease;
+  }
+  .press,
+  .press:active {
+    transform: none;
+  }
+  .hover-lift:hover {
+    transform: none !important;
+  }
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .glass {
+    background: #141418;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
+
+@media (prefers-contrast: more) {
+  .glass {
+    background: #0b0b0d;
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+}
