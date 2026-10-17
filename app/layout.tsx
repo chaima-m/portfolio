@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     "LLM",
     "RAG",
     "Docker",
-    "Kubernetes",
     "Python",
     "ENSIA",
     "Algeria",
@@ -35,7 +34,7 @@ export const metadata: Metadata = {
     title: "Chaima Mekhloufi - AI & Data Science Engineer",
     description:
       "LLM, RAG and containerized AI systems. Final-year engineering student at ENSIA, Algiers.",
-    images: "/OpenGraph.png",
+    images: "/og-image.png",
   },
   alternates: { canonical: SITE_URL },
 };
